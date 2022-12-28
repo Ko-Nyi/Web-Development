@@ -1,0 +1,147 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Click event listener example</title>
+  <meta charset="utf-8">
+  <script>
+   // Let's add a click event listener on the whole page
+   
+   // Version 1 : we use a separate callback function
+  //  addEventListener('click', processClick);
+   
+  //   function processClick(evt) {
+  //     alert("click");
+  //   }
+   // version 2 (very common): we put the callback between      //the parenthesis 
+    // addEventListener('click', function(evt) {
+    //   alert("click");
+    // });
+   // version 3: use the syntax with "on" followed by 
+   // the name of the event, followed by the callback 
+   // function or a ref to the callback function
+   // When listening on the whole window, we usually
+   // explicitly use window.onclick, window.onkeyup etc.
+    
+  //  window.onclick = processClick;
+     
+  //  function processClick(evt) {
+  //     alert("click");
+  //  };
+    
+</script>
+</head>
+<body>
+  <p>Click anywhere on this page</p>
+</body>
+</html> -->
+
+<!----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First examples of an event listener</title>
+    <script>
+        addEventListener('click',function(evt){
+            document.body.innerHTML+="button clicked!<br>";
+        });
+    </script>
+    is the same like this
+    <script>
+        addEventListener('click', processClick);
+        function processClick(evt){
+            console.log("button clicked!");
+        }
+    </script>
+</head>
+<body>
+    <p>Click anywhere on this page</p>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Second example of an event listener</title>
+    <meta charset="utf-8">
+</head>
+<body> 
+  <button id="myButton">Click me</button>
+  
+   <script>
+    // 1 get a reference on the element
+    let b = document.querySelector("#myButton");
+    
+    // 2 add the event listener
+    b.addEventListener('click', function(evt) {
+      alert("clicked!");
+    })
+  </script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Second example of an event listener</title>
+</head>
+<body>
+    <button id="myButton">Click me!</button>
+    <p></p>
+    <script>
+      var b=document.querySelector("#myButton");
+      b.addEventListener('click',function(evt){
+        alert("Button clicked");
+      });
+    </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Third example of an event listener</title>
+  <script>
+    function processClick(evt){
+      alert("Button clicked");
+    };
+  </script>
+</head>
+<body>
+    <button id="myButton" onclick="processClick(event);">Click me!</button>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Removing an event listener</title>
+</head>
+<body>
+    <button id="myButton">Click me, this will work only once!.</button>
+    <p></p>
+    <script>
+      var b=document.querySelector('#myButton');
+      b.addEventListener('click',prcessClick);
+
+      function processClick(evt){
+        alert("Button clicked, event listener removed ,try to click on the button again: nothing will happen anymore!");
+      b.removeEventListener('click',processClick);
+      }
+    </script>
+</body>
+</html> -->

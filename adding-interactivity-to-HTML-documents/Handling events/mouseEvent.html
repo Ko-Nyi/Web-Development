@@ -1,0 +1,52 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detect mouse clicks on elements</title>
+    <link rel="stylesheet" href="mouseEvent.css">
+    <script src="mouseEvent.js"></script>
+</head>
+<body>
+    <button id="button1" onclick="processClick(event)">Button1</button>
+    <div id="myDiv" onclick="processClick(event)">Click also on this div!</div>
+    <div id="clicks"></div>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mousemove events relative to page</title>
+    <script src="mouseEvent.js"></script>
+</head>
+<body>
+    <h1>Please move the mouse on this window!</h1>
+    <div id="mousePositions"></div>
+    <p>Yep! The above values are the same when we are listening on the window and we did not scrolled the page!</p>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mousemove events relative to page</title>
+    <link rel="stylesheet" href="mouseEvent.css">
+    <script src="mouseEvent.js"></script>
+</head>
+<body>
+    <h1>Please move the mouse on the grey canvas below!</h1>
+    <p>You'll see that there is a no more a problem: (0,0) is now at the top left corner of the canvas,even if we scroll the page!</p>
+    <canvas id="myCanvas" width="300" height="50"></canvas>
+    <div id="mousePositions"></div>
+    <div id="mouseScreenPositions"></div>
+</body>
+</html>

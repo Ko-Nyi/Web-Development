@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript color chooser use</title>
+    <script src="ColorInput.js"></script>
+</head>
+<body>
+    <h1>Simple <code>&lt;input type =color &gt;</code>use </h1>
+    <p>Pick a color to change the background color of the page</p>
+    <label>
+        <input type="color"
+                onchange="changePageBackgroundColor(this.value);"    
+    >
+    </label>
+    <p>
+        <span id="choosedColor"></span>
+    </p>
+</body>
+</html>

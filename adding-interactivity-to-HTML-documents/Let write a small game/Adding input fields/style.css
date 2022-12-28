@@ -1,0 +1,12 @@
+#myCanvas {
+    border: 1px solid black;
+    float:left;
+  }
+  
+  #controls {
+    float:left;
+  }
+
+  body{
+    background-color: rgb(123, 73, 216);
+  }

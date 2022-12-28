@@ -1,0 +1,17 @@
+/* #myDiv {
+    color:red;
+    background-color: pink;
+    width:100px;
+    height:100px;
+    text-align:center;
+    margin:20px;
+  } */
+
+  canvas{
+    border:4px solid;
+    margin-left: 20px;
+    background-color: lightgray;
+  }
+  body{
+    height: 2000px;
+  }

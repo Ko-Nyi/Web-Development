@@ -1,0 +1,12 @@
+body{
+    padding: 10px;
+}
+.draggable{
+    width: 100px;
+    height: 100px;
+    background-color: #666;
+    color: white;
+    padding: 10px 12px;
+    cursor: move;
+    position: absolute;
+}
