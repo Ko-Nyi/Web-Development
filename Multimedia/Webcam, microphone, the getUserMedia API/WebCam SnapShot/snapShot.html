@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCam screenShot</title>
+    <link rel="stylesheet" href="snapShot.css">
+    <script src="snapShot.js"></script>
+</head>
+<body onload="init();">
+     <h1>Take a snapshot of the current video stream</h1>
+     <p>
+        <button onclick="startWebCam();">Start Video Camera</button>
+        <button onclick="stopWebCam();">Stop Video Camera</button>
+        <button onclick="snapShot();">Take a snapshot</button>
+     </p>
+     <video onclick="snapShot(this);" width="200" height="200" id="video" controls autoplay></video>
+     <p>
+
+        Snapshots: <p>
+      <canvas  id="myCanvas" width="200" height="150"></canvas> 
+</body>
+</html>

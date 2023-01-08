@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="utf-8">
+  <title>getUserMedia</title>
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <script src="script.js"></script>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body  onload="init();">
+<h1> Accessing the Webcam </h1>
+ 
+<div>
+  <video  onclick="snapshot(this);" width=400 height=400 id="video" class="vid" autoplay></video>
+  <button onclick="startWebcam();">Start WebCam</button>
+  <button onclick="stopWebcam();">Stop WebCam</button>
+  <button onclick="snapshot();">Save a Selfy</button> 
+  
+
+ </div> 
+<p>
+<canvas  id="myCanvas" width="720" height="100">
+<canvas  id="myHiddenCanvas" class="hiddenCanvas" width="400" height="320">
+</canvas> 
+
+
+</body>
+</html>

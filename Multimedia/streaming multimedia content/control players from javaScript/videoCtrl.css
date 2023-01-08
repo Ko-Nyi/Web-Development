@@ -1,0 +1,470 @@
+/* w3c-blue.css
+
+   Copyright (c) 2005 W3C (MIT, ERCIM, Keio), All Rights Reserved.
+   W3C liability, trademark, document use and software licensing
+   rules apply, see:
+
+   https://www.w3.org/Consortium/Legal/copyright-documents
+   https://www.w3.org/Consortium/Legal/copyright-software
+*/
+
+@media projection { 
+    html {height: 100%}
+  }
+  
+  body
+  {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    height: 100%;
+    font-family: "Gill Sans MT", "Gill Sans", GillSans, sans-serif;
+    font-size: 19px;
+  }
+  
+  div.toolbar {
+    position: fixed; z-index: 200;
+    top: auto; bottom: 0; left: 0; right: 0;
+    height: 1.2em; text-align: right;
+    padding-left: 1em;
+    padding-right: 1em; 
+    font-size: 60%;
+    color: red; background: rgb(240,240,240);
+  }
+  
+  div.toolbar a { color: red; }
+  div.toolbar a:visited { color: red; }
+  div.toolbar a:link { color: red; }
+  div.toolbar a:active { color: red; }
+  
+  body {
+    color: #eeeeff;
+    background-color: #3d64ac;  }
+  div.slide {
+    text-shadow: black 1px 1px 1px;
+    filter: Shadow(Color=#000000, Direction=135, Strength=1);
+  }
+  pre {
+    border-color: #95ABD0;
+   text-shadow:none;
+    font-weight:normal;
+    font-family:Monaco
+  }
+  
+  a:visited { color: #FF8 }
+  a:link { color: #FF8 }
+  a:hover { color: #FF8; text-decoration: underline }
+  a:active { color: #FF8; text-decoration: underline }
+  
+  @media print {
+    body {
+      color: black;
+      background-color: white;
+    }
+  }
+  
+  #head-logo, #head-logo-fallback {
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    height: 84px;
+    width: 158px;
+    z-index: -1;
+  }
+  
+  #stata-big {
+    position: absolute;
+    bottom: 00px;
+    left: 0px;
+    height: 231px;
+    width: 242px;
+    z-index: -1;
+  }
+  
+  div.slide.cover.title a { color: yellow }
+  
+  /* script sets position property to absolute or relative */
+  div.slide {
+    z-index: 20;
+    position: relative;
+    margin: 0 0 0 0;
+    padding: 0;
+    border-width: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;  /* for IE6 */
+    left: 0;
+    right: 0;
+    line-height: 1.2;
+    background: transparent;
+    overflow: auto;  /* Avoid collapsing of margins outside the slide */
+  }
+  
+  /* background div's are not positioned */
+  div.background {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url(stata-small.jpg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+  
+  /* this is a hack to hide property from IE6 and below */
+  div[class="footer"] { position: fixed }
+  div[class="background"] { position: fixed }
+  
+  div.handout {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  /* hide images used for save with content hack */
+  /* note this means we have to unhide the logo */
+  div.background img {
+    display: none;
+    visibility: hidden;
+  }
+  
+  /* force page break before all but the first slide */
+  div.slide + div[class].slide { page-break-before: always;}
+  
+  div.slide h1 a {color: #eeeeff; text-decoration: none}
+  div.slide h1 a:link {color: #eeeeff}
+  div.slide h1 a:visited {color: #eeeeff}
+  div.slide h1 a:active {color: red; text-decoration: underline}
+  div.slide h1 a:hover {color: yellow; text-decoration: underline}
+  
+  div.slide h1 {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 200%;
+    font-weight: normal;
+  }
+  
+  div.slide.cover.title h1 {
+    font-size: 300%;
+    padding-top: 4em;
+    padding-bottom: 0;
+  }
+  
+  div.slide.title h1 {
+    font-size: 300%;
+    padding-top: 4em;
+    padding-bottom: 0;
+  }
+  
+    div.slide.title h1 {
+      color: #ef8645;
+    }
+    div.slide.cover.title h1 {
+      color: #eeeeff;
+    }
+  
+  div.slide.cover p.author {
+    text-align: center;
+    color: #ef8645;
+  }
+  
+  div.slide.cover p.event {
+    text-align: center;
+  }
+  
+  div.slide.cover p.attribution {
+    position: absolute;
+    bottom: 1.5em;
+    left: 242px;
+    font-size: 50%;
+    color: black;
+  }
+  
+  div.slide.cover p.attribution a {
+      color: #AAF;
+  }
+  
+  div.slide.cover p.attribution img { vertical-align: bottom }
+  
+  /* this is a hack to hide property from IE6 and below */
+  /* width set to below 100% to avoid horizontal scrollbar */
+  div[class="header"] {position: fixed; width: 98%}
+  
+  div.header p.explanation {
+    font-style: italic;
+  }
+  
+  #centered-photo
+  {
+    margin: 0;
+    margin-top: 7%;
+    padding: 0;
+  }
+  
+  @media print {
+    body { color: black }
+    div.slide h1 { color: black }
+    div.cover div.header {
+      background: white; color: black;
+      border-width: thin;
+      border-style: solid;
+      border-bottom-width: thick;
+      border-bottom-color: #95ABD0;
+    }
+    div.cover div.header a { color: black }
+    div.cover div.header p {color: black }
+    div.cover { background: transparent }
+    #cover-photo
+    {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      margin-top: 20%;
+      padding: 0;
+    }
+    h1, pre { font-size: 60% }
+  }
+  
+  div.slide.cover a {
+    color: #eeeeff;
+  }
+  
+  div.slide.cover a:hover, div.slide.cover a:active {
+      color: yellow; text-decoration: underline;
+  }
+  
+  li pre { margin-left: 0; }
+  
+  blockquote { font-style: italic }
+  
+  img { background-color: transparent }
+  
+  p.copyright { font-size: smaller }
+  
+  .center { text-align: center }
+  .footnote { font-size: smaller; margin-left: 2em; }
+  
+  a img { border-width: 0; border-style: none }
+  
+  div.toc {color: black }
+  div.toc a:visited {color: black }
+  div.toc a:link {color: black }
+  div.toc a:hover {color: black }
+  div.toc a:active {color: black }
+  div.toc a {color: black }
+  div a.toc-heading {color: black}
+  div.toc a.titleslide { font-weight: bold; font-style: italic }
+  a {text-decoration: none}
+  .navbar a:link {color: #eeeeff}
+  .navbar a:visited {color: red}
+  .navbar a:active {color: red}
+  .navbar a:hover {color: red}
+  
+  ul { list-style-type: square; }
+  ul ul { list-style-type: disc; }
+  ul ul ul { list-style-type: circle; }
+  ul ul ul ul { list-style-type: disc; }
+  li { margin-left: 0.5em; margin-top: 0.5em; }
+  li li { font-size: 85%; font-style: italic }
+  li li li { font-size: 85%; font-style: normal }
+  
+  div dt
+  {
+    margin-left: 0;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
+  div dd
+  {
+    margin-left: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  
+  p,pre,ul,ol,blockquote,h2,h3,h4,h5,h6,dl,table {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  
+  p.subhead { font-weight: bold; margin-top: 2em; }
+  
+  .smaller { font-size: smaller }
+  .bigger { font-size: 130% }
+  
+  td,th { padding: 0.2em }
+  
+  ul {
+    margin: 0.5em 1.5em 0.5em 1.5em;
+    padding: 0;
+  }
+  
+  ol {
+    margin: 0.5em 1.5em 0.5em 1.5em;
+    padding: 0;
+  }
+  
+  ul { list-style-type: square; }
+  ul ul { list-style-type: disc; }
+  ul ul ul { list-style-type: circle; }
+  ul ul ul ul { list-style-type: disc; }
+  
+  ul li { 
+    list-style: none;
+    margin: 0.1em 0em 0.6em 0;
+    padding: 0 0 0 40px;
+    background: transparent url(bullet.gif) no-repeat 5px 8px;
+    line-height: 1.4;
+  }
+  
+  /* workaround IE's failure to support background on li for print media */
+  @media print { ul li { list-style: disc; padding-left: 0; background: none; } }
+  
+  ol > li { 
+    margin: 0.1em 0em 0.6em 1.5em;
+    padding: 0 0 0 0px;
+    line-height: 1.4;
+    list-style-type: decimal;
+    background: transparent;
+  }
+  
+  li ol li, ol li { 
+    margin: 0.1em 0em 0.6em 1.5em;
+    padding: 0 0 0 0px;
+    list-style-type: decimal;
+    background: transparent;
+  }
+  
+  li ul li { 
+    font-size: 85%; 
+    font-style: italic;
+    list-style-type: square;
+    background: transparent;
+    padding: 0 0 0 0;
+  }
+  li li ul li { 
+    font-size: 85%; 
+    font-style: normal;
+    list-style-type: disc;
+    background: transparent;
+    padding: 0 0 0 0;
+  }
+  li li li ul li {
+    list-style-type: circle;
+    background: transparent;
+    padding: 0 0 0 0;
+  }
+  
+  /*
+   setting class="outline on ol or ul makes it behave as an
+   ouline list where blocklevel content in li elements is
+   hidden by default and can be expanded or collapsed with
+   mouse click. Set class="expand" on li to override default
+  */
+  
+  ol.outline li:hover { cursor: pointer }
+  ol.outline li.nofold:hover { cursor: default }
+  
+  ul.outline li:hover { cursor: pointer }
+  ul.outline li.nofold:hover { cursor: default }
+  
+  ol.outline { list-style:decimal; }
+  ol.outline ol { list-style-type:lower-alpha }
+  
+  ol.outline li.nofold {
+    padding: 0 0 0 20px;
+    background: transparent url(nofold-dim.gif) no-repeat 0px 0.5em;
+  }
+  ol.outline li.unfolded {
+    padding: 0 0 0 20px;
+    background: transparent url(fold-dim.gif) no-repeat 0px 0.5em;
+  }
+  ol.outline li.folded {
+    padding: 0 0 0 20px;
+    background: transparent url(unfold-dim.gif) no-repeat 0px 0.5em;
+  }
+  ol.outline li.unfolded:hover {
+    padding: 0 0 0 20px;
+    background: transparent url(fold.gif) no-repeat 0px 0.5em;
+  }
+  ol.outline li.folded:hover {
+    padding: 0 0 0 20px;
+    background: transparent url(unfold.gif) no-repeat 0px 0.5em;
+  }
+  
+  ul.outline li.nofold {
+    padding: 0 0 0 52px;
+    background: transparent url(bullet-nofold-dim.gif) no-repeat 5px 8px;
+  }
+  ul.outline li.unfolded {
+    padding: 0 0 0 52px;
+    background: transparent url(bullet-fold-dim.gif) no-repeat 5px 8px;
+  }
+  ul.outline li.folded {
+    padding: 0 0 0 52px;
+    background: transparent url(bullet-unfold-dim.gif) no-repeat 5px 8px;
+  }
+  ul.outline li.unfolded:hover {
+    padding: 0 0 0 52px;
+    background: transparent url(bullet-fold.gif) no-repeat 5px 8px;
+  }
+  ul.outline li.folded:hover {
+    padding: 0 0 0 52px;
+    background: transparent url(bullet-unfold.gif) no-repeat 5px 8px;
+  }
+  
+  li ul.outline li.nofold {
+    padding: 0 0 0 21px;
+    background: transparent url(nofold-dim.gif) no-repeat 5px 8px;
+  }
+  li ul.outline li.unfolded {
+    padding: 0 0 0 21px;
+    background: transparent url(fold-dim.gif) no-repeat 5px 8px;
+  }
+  li ul.outline li.folded {
+    padding: 0 0 0 21px;
+    background: transparent url(unfold-dim.gif) no-repeat 5px 8px;
+  }
+  li ul.outline li.unfolded:hover {
+    padding: 0 0 0 21px;
+    background: transparent url(fold.gif) no-repeat 5px 8px;
+  }
+  li ul.outline li.folded:hover {
+    padding: 0 0 0 21px;
+    background: transparent url(unfold.gif) no-repeat 5px 8px;
+  }
+  
+  
+  img.withBorder {
+    border: 2px solid #c60;
+    padding: 4px;
+  }
+  
+  pre {
+   font-size: 80%;
+   font-weight: bold;
+   line-height: 1.2;
+   padding-top: 0.2em;
+   padding-bottom: 0.2em;
+   padding-left: 1em;
+   padding-right: 1em;
+   border-style: solid;
+   border-left-width: 1em;
+   border-top-width: thin;
+   border-right-width: thin;
+   border-bottom-width: thin;
+  }
+  
+  li pre { margin-left: 0; }
+  
+  /* for Bert as an ardent user of the old W3C slidemaker tool */
+  
+  div.comment { display: none; visibility: hidden }
+  
+  @media print { div.comment { display: block; visibility: visible } }
+  
+  div.slide.clip {
+    overflow: hidden;
+  }
+  

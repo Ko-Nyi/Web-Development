@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Video (by PLH from a 2010 talk: https://www.w3.org/2010/Talks/0430-www2010-plh/video.html)</title>
+    <link rel="stylesheet" href="videoCtrl.css">
+    <script src="videoCtrl.js"></script>
+</head>
+<body>
+    <div class="slide" style="display: block; visibility: visible; position: absolute; border-style: none;">
+        <h1>HTML5 &lt;video&gt;</h1>
+    
+        <pre>&lt;video src='myMovie' id='myVideoElement' />
+    
+        var vid = document.getElementById("myVideoElement");
+        <span id='play' onclick="playVideo();" style='cursor: pointer; color: #999;'>vid.play();</span>
+        <span id='pause' onclick="pauseVideo();" style='cursor: pointer; color: #999;'>vid.pause();</span>
+        <span id='rewind' onclick="rewindVideo();" style='cursor: pointer; color: black;'>vid.currentTime = 0;</span></pre>
+    
+        <p style='text-align: left; position: absolute; width: 320px; height:240px; left: 30%; top: 55%; z-index: 2'>
+    This is a paragraph in HTML on top of the video.
+        </p>
+        <p style='text-align: left; position: absolute; width: 320px; height:240px; left: 30%; top: 70%; z-index: 0'>
+    CSS opacity allows this video to be partially transparent.
+        </p>
+        <video style='opacity: 0.5; position: absolute; top: 55%; left: 40%; width: 320px; height:240px; z-index: 1'
+      src='https://www.w3.org/2008/Talks/26-video-plh/small.ogg' width='360' height='240' id="vid">
+            <p>This video cannot be displayed.
+            <br /> No support for HTML5?</p>
+        </video>
+        </div>
+</body>
+</html>
